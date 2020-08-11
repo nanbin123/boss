@@ -1,0 +1,152 @@
+<view class="Newposition">
+	<view class="NewpositionTitles">
+		<text class="titleT">发布社招职位</text>
+	</view>
+	<form bindsubmit="formSubmit">
+		<view class="content">
+			<view class="nav">
+				<text class="text">职位名称</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="name"   bindinput="bindKeyInput" auto-focus placeholder="请填写职位名称,如:销售专员"/>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav" bindtap="toPositionType">
+				<text class="text">职位类型</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="positionName"   bindinput="bindKeyInput" placeholder="请填写职位类型" value="{{positionName}}" disabled="true" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav" bindtap="actionSheetTap" id="1">
+				<text class="text">经验要求</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="experience"   bindinput="bindKeyInput" placeholder="请选择经验要求" value="{{term1}}" disabled="true" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav" bindtap="actionSheetTap" id="2">
+				<text class="text">最低学历</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="education"   bindinput="bindKeyInput" placeholder="请选择学历" value="{{educations1}}" disabled="true" />
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="nav" bindtap="actionSheetTap" id="3">
+				<text class="text">薪资范围</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="salary" value="{{salary}}"  bindinput="bindKeyInput" placeholder="请选择合理的薪资范围" disabled="true" />
+						</view>
+					</view>
+				</view>
+			</view>
+
+
+			<view class="nav"  bindtap="toPositionDescribe">
+				<text class="text">职位描述</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="positionDescribe" class="positionDescribe" bindinput="bindKeyInput" disabled="true" placeholder="介绍工作内容、职位要求、加分项" value="{{positionDescribe}}" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- <view class="nav" bindtap="toworkAddress">
+				<text class="text">工作地点</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input   bindinput="bindKeyInput" placeholder="请填写精确的工作地点" disabled="true" value="{{address}}" />
+						</view>
+					</view>
+				</view>
+			</view> -->
+		</view>
+		<view class="button">
+		<!-- bindtap="checkSave"  -->
+			<button class="button2" formType="submit">发布</button>
+		</view>
+	</form>
+
+
+
+	<!-- 蒙版 -->
+	<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+		<view class="box">
+			<view class="item {{active}}" bindtap="chooseExperienceBtnClick">
+				<text class="item1">经验要求</text>
+				<text class="item2">{{term1?term1:'请选择'}}</text>
+			</view>
+			<view class="item {{active1}}" bindtap="chooseEducationBtnClick">
+				<text class="item1">最低学历</text>
+				<text class="item2">{{educations1?educations1:'请选择'}}</text>
+			</view>
+			<view class="item {{active2}}" bindtap="choosePayBtnClick">
+				<text class="item1">薪资范围</text>
+				<text class="item2">{{salary?salary:'请选择'}}</text>
+			</view>
+		</view>
+
+		<view wx:if="{{experience == 1}}">
+			<view class="tishi">
+				<text class="tishiItem">请选择经验要求</text>
+				<text class="tishiItem1" bindtap="click">确定</text>
+			</view>
+			<view>
+				<picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;"  value="{{value}}" bindchange="bindChange2">
+					<picker-view-column>
+						<view wx:for="{{term}}" style="line-height: 50px;" class="items">{{item}}</view>
+					</picker-view-column>
+				</picker-view>
+			</view>		
+		</view>
+		
+		<view wx:if="{{education == 1}}">
+			<view class="tishi">
+				<text class="tishiItem">请选择最低学历</text>
+				<text class="tishiItem1" bindtap="click1">确定</text>
+			</view>
+			<view>
+				<picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="bindChange">
+					<picker-view-column>
+						<view wx:for="{{educations}}" style="line-height: 50px;" class="items">{{item}}</view>
+					</picker-view-column>
+				</picker-view>
+			</view>		
+		</view>
+
+
+		<view wx:if="{{pay == 1}}">
+			<view class="tishi">
+				<text class="tishiItem">请选择月薪范围(单位:千元)</text>
+				<text class="tishiItem1" bindtap="click2">确定</text>
+			</view>
+			<view>
+			<picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="bindChange1">
+					<picker-view-column>
+						<view wx:for="{{payStr}}" style="line-height: 50px;text-align: center;">{{item}}K</view>
+					</picker-view-column>
+					<picker-view-column>
+						<view wx:for="{{payEnd}}" style="line-height: 50px;text-align: center;">{{item}}K</view>
+					</picker-view-column>
+				</picker-view>
+			</view>	
+		</view>
+	</action-sheet>
+</view>

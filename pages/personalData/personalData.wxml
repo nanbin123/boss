@@ -1,0 +1,85 @@
+<!--pages/ personalData/ personalData.wxml-->
+<view class=" personalData">
+  <view class="nameData">
+    <view class="personalcontent">
+      <text class="name">{{listData.userName}}</text> 
+      <text class="jobStatus">{{listData.jobStatus}}</text>
+    </view>
+
+  </view>
+  <view class="state">
+    <view class="stateYears">
+      <text class="iconfont icon-gongwenbao"><text class="item ">{{listData.workingLife}}年</text></text>
+      <text class="iconfont icon-xuejiyidongguanli"><text class="item">{{listData.education}}</text></text>
+      <text class="iconfont icon-dangao"><text class="item">{{listData.age}}岁</text></text>
+    </view>
+    <view class="stateNav">
+      <text>{{listData.advantage}}</text>
+    </view>
+  </view>
+
+  <view class="Resume">
+    <view class="circle"></view>
+    <view class="title">
+      <text class="titleText">求职期望</text>
+    </view>
+    <view class="expectationsbox" wx:for="{{listData.userjobExpect}}"  wx:key="id">   
+        <text class="expectationsItem">{{item.position}}</text>
+        <text class="expectationsItem">{{item.district}}</text>
+        <text class="expectationsItem" wx:if="{{item.category =='0'}}">全职</text>
+        <text class="expectationsItem" wx:elif="{{item.category =='1'}}">兼职</text>
+        <text class="money">{{item.salaryStr}}K-{{item.salaryEnd}}K</text>        
+    </view>
+  </view>
+
+  <view class="workExperience">
+    <view class="circle"></view>
+    <view class="title">
+      <text class="titleText">工作经历</text>
+    </view>
+    <view class="workExperienceContent" wx:for="{{listData.userJobExperience}}"  wx:key="id">
+      <view class="experienceContentTitle">      
+          <text class="expectationsItem">{{item.companyName}}</text>
+      </view>
+      <view>
+        <text class="positionName">{{item.positionName}}</text> 
+        <text class="serviceTime">{{item.serviceTimeStr}}-{{item.serviceTimeEnd}}</text>
+      </view>
+      <view class="Strength">
+        <text>工作内容:</text>
+        <text>{{item.content}}</text>       
+      </view>
+       <view class="Strength">
+        <block wx:if="{{item.achievement}}">
+          <text>工作业绩:</text>
+          <text>{{item.achievement}}</text>   
+        </block>    
+      </view>
+    </view>
+  </view>
+  <view class="educationExperience">
+      <view class="circle"></view>
+      <view class="title">
+        <text class="titleText">教育经历</text>
+      </view>
+    <view  wx:for="{{listData.userJobEducation}}"  wx:key="id">
+      <view>
+          <text class="expectationsItem">{{item.school}}</text>
+          <text class="titleIco1 ">{{item.eduTimeStr}}-{{item.eduTimeEnd}}</text>
+      </view>
+      <view class="mt20rpx"> 
+        <text class="edu">{{item.major}}</text><text class="dian"/>
+        <block wx:if="{{item.fullTime =='非全日制'}}"> 
+            <text class="edu">{{item.fullTime}}</text> <text class="dian"/>  
+        </block>       
+        <text class="edu">{{item.education}}</text>
+      </view>
+      <view class="experience">
+          <text class="edu">{{item.experience}}</text>
+      </view>
+    </view>
+  </view>
+    <view class="button">
+     <button bindtap="tochatRoom">邀请面试</button>
+  </view>
+</view>

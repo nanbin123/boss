@@ -1,0 +1,50 @@
+{
+  "pages": [    
+    "pages/recruit/recruit",
+    "pages/personal/personal",    
+    "pages/test/test",
+    "pages/newCompany/newCompany",
+    "pages/screen/screen",
+    "pages/Newposition/Newposition",
+    "pages/addressBar/addressBar",
+    "pages/workAddress/workAddress",
+    "pages/personalDetails/personalDetails",
+    "pages/information/information",
+    "pages/JobListings/JobListings",
+    "pages/positionType/positionType",
+    "pages/jobTitle/jobTitle",
+    "pages/positionDescribe/positionDescribe"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d3361a",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#d3361a",
+    "list": [
+      {
+        "pagePath": "pages/recruit/recruit",
+        "text": "人才",
+        "iconPath": "/image/tab/jobUnSelect.png",
+        "selectedIconPath": "/image/tab/jobSelect.png"
+      },
+      {
+        "pagePath": "pages/JobListings/JobListings",
+        "text": "发布",
+        "iconPath": "/image/tab/fabuUnSelect.png",
+        "selectedIconPath": "/image/tab/fabuSelect.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/image/tab/myUnSelect.png",
+        "selectedIconPath": "/image/tab/mySelect.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

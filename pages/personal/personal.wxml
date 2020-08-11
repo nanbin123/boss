@@ -1,0 +1,32 @@
+<!--pages/personal/personal.wxml-->
+<view class="personalContainer">
+  <view class="personalHeard">
+    <button class="HeardTop" open-type='getUserInfo' bindgetuserinfo="handleGetUserInfo" bindtap="toNewUser" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <view class="HeardTop_L">
+        <text class="item1">{{userInfo.userName? userInfo.userName:'未登录/注册'}}</text>
+        <text class="item2">{{title?title:'点击头像可登陆/注册'}}</text>
+      </view>
+      <view class="headPortraits">
+        <image class="userAvatar" src="{{userInfo.avatarUrl? userInfo.avatarUrl : '/image/tab/touxiang.jpg'}}" bindtap='showRule'></image>
+      </view>
+    </button>
+  </view>
+
+
+  <view class="personalContent">
+    <view class="contentTop">
+      <view class="items" bindtap="toManagerialPosition">
+
+        <text class="iconfont icon-zaixianjianli2"></text>
+        <text class="items1">管理职位</text>
+        <text class="items2 iconfont icon-gengduo"></text>
+      </view>
+      <view class="items">
+        <text class="iconfont icon-taohuazhaojiling"></text>
+        <text class="items1">企业管理</text>
+        <text class="items2 iconfont icon-gengduo"></text>
+      </view>
+    </view>
+  </view>
+
+</view>

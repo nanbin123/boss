@@ -1,0 +1,63 @@
+/* pages/associationActivity/associationActivity.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.body{
+  width: 100%;
+  height: 100%;
+  padding: 0 20rpx;
+}
+
+.title {
+  width: 100%;
+  height: 200rpx;
+}
+.titleT{
+  width: 100%;
+  display: block;
+  font-size: 54rpx;
+  font-weight: bold;
+  padding: 16rpx 0
+}
+.titleB{
+  font-size: 30rpx;
+  color: #5d5d5d
+}
+.section{
+  width: 100%;
+  height: calc(100% - 200rpx);  
+}
+.section textarea{
+  width: 96%;
+  height: 80%;
+  color: #5d5d5d
+}
+
+.place-holder{
+  font-size: 30rpx;
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  margin-top: 40px;
+}
+.viewButton{
+  width: 100%;
+  height: 150rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  border-top:  4rpx solid #eeeeee
+
+}
+.viewButton button{
+  width: 90%;
+  background: #d3361a;
+  color: #fff;
+}

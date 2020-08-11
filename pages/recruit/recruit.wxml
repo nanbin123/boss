@@ -1,0 +1,48 @@
+<!--pages/recruit/recruit.wxml-->
+<view class="recruit">
+  <view class="recruitTop">
+    <view class="recruitTopL">
+      <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll">
+          <view class="scroll-view-item_H demo-text-1" wx:for="{{listdata}}" wx:key="index">{{item.positionName}}</view>          
+      </scroll-view>
+    </view>
+    <!-- <view class="recruitTopR">
+      <view class="icon1 iconfont icon-gengduo8" bindtap="toJobList"></view>
+      <view class="icon1 iconfont icon-sousuo2"></view>
+    </view> -->
+  </view>
+  <view class="recruitContent"> 
+    <view class="ContentT">
+        <view class="ContentTLeft">
+          <text bindtap="swichNav" class="{{sortType==1?'active':''}}" data-current="1">推荐</text>
+          <text bindtap="swichNav" class="{{sortType==2?'active':''}}" data-current="2">全职</text>          
+          <text bindtap="swichNav" class="{{sortType==3?'active':''}}" data-current="3">兼职</text>
+        </view>
+        <view class="ContentTRight">
+          <text class="button1" bindtap="toScreen">筛选</text>
+        </view>      
+    </view>
+    <view class="ContentC" bindtap="topersonalData" wx:for="{{moment}}" wx:key="index" id="{{item.id}}">
+      <view class="contentName">
+        <view class="contentNameL">
+          <view class="head">
+            <text class="name">{{item.userName}}</text>
+            <text class="age">{{item.age}}</text>   
+            <text class="jobStatus">{{item.jobStatus}}</text>       
+          </view>
+          <view class=" contentView">
+            <text class="content">工作年限{{item.workingLife}}年</text>
+            <text class="line"></text>
+            <text class="content education">{{item.education}}</text>
+            <text class="line"></text>
+            <text class="content" style="padding-left:30rpx;">{{item.salaryStr}}K-{{item.salaryEnd}}K</text>
+          </view>
+        </view>
+      </view>
+      <view class="advantage">
+        <text>{{item.advantage}}</text>
+      </view>
+    </view>
+  </view>
+   
+</view>

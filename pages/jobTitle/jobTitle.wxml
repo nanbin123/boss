@@ -1,0 +1,39 @@
+<!--pages/jobTitle/jobTitle.wxml-->
+<view class="jobTitle">
+  <view class="jobExpectationsTitle">
+    <text class="titleT">职位名称</text>
+    <text class="titleB">不能填写QQ、微信、电话等联系方式，以及特殊符号</text>
+  </view>
+  <view class="input">
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input name="" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="输入职位名称" value="{{name}}" />
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="jobList">
+    <text class="jobItem" wx:for="{{listDatas}}" bindtap="showview" id="{{item.id}}">{{item.name}}</text>
+  </view>
+
+  <view class="bg" bindtap='hideview' style='display:{{display}}'></view>
+  <view class="show" style='display:{{display}}'>
+    <view class="menu">
+      <view class="left">
+        <scroll-view scroll-y="true" class="scroll">
+          <text class="listItem" wx:for="{{listDatas1}}" bindtap="showList" id="{{item.id}}">{{item.name}}</text>
+        </scroll-view>
+
+      </view>
+
+      <view class="right">
+        <scroll-view scroll-y="true" class="scroll">
+          <text class="listItem1" wx:for="{{listDatas2}}" bindtap='hideview' data-name="{{item.name}}" id="{{item.id}}">{{item.name}}</text>
+        </scroll-view>
+
+      </view>
+    </view>
+  </view>
+</view>

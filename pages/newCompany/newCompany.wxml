@@ -1,0 +1,59 @@
+<!--pages/newCompany/newCompany.wxml-->
+<view class="newCompany">
+  <view class="newCompanyTitles">
+    <text class="titleT">创建公司</text>
+    <text class="titleB">公司信息将被审核，请确保您输入的信息真实有效</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="content">
+      <view class="nav">
+        <text class="text">公司全称</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input name="name" class="weui-input" maxlength="10" bindinput="bindKeyInput" auto-focus placeholder="请填写公司全称" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="nav">
+        <text class="text">公司简称</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input name="abbreviation" class="weui-input" maxlength="10" bindinput="bindKeyInput" auto-focus placeholder="请填写公司简称" />
+            </view>
+          </view>
+        </view>
+      </view>
+  <!--<view class="nav">
+        <text class="text">公司行业</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input  class="weui-input" maxlength="10" bindinput="bindKeyInput" auto-focus placeholder="请选择公司行业" />
+            </view>
+          </view>
+        </view>
+      </view>-->
+     
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+     <view class="nav">
+        <text class="text">人员规模</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input name="scale" class="weui-input" maxlength="10" bindinput="bindKeyInput" auto-focus placeholder="请填写项目描述" value="{{array[index]}}" disabled="true"/>
+            </view>
+          </view>
+        </view>
+      </view>
+  </picker>
+</view>
+</view>
+<view class="button">
+  <button class="button1" form-type="submit" bindtap="toLicense">提交</button>
+</view>
+</form>
+</view>

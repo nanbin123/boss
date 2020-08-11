@@ -1,0 +1,38 @@
+<!--pages/addressBar/addressBar.wxml-->
+<view class="addressBar">
+	<view class="jobExpectationsTitle">
+		<text class="titleT">工作地点</text>
+		<text class="titleB">详细的工作地点可找到更准确的找到公司呦</text>
+	</view>
+<form catchsubmit="formSubmit">
+	<view class="nav" bindtap="toAddress">
+		<text class="text">工作地点</text>
+		<view class="page-section">
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<input name="abbreviation" class="weui-input" maxlength="10" bindinput="bindKeyInput" auto-focus placeholder="请填写工作地点" disabled="true" value="{{address}}"/>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="nav">
+		<text class="text">门牌号</text>
+		<view class="page-section">
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell weui-cell_input">
+					<input name="houseNumber" class="weui-input" maxlength="10" bindinput="bindKeyInput" auto-focus placeholder="请输入您的门牌号" />
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="nav1">
+		<text class="text">商圈</text>
+    <view class="businessArea" >
+    <text class="items {{active}}" wx:for="{{businessArea}}" bindtap="businessName" data-name="{{item.name}}" data-index="{{index}}">{{item.name}}</text>
+    </view>
+	</view>
+  <view class="button">
+  <button bindtap="submit">保存</button>
+  </view>
+</form>
+</view>

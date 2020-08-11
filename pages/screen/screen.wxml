@@ -1,0 +1,45 @@
+<!--pages/screen/ screen.wxml-->
+<view class="screen">
+  <view class="center">
+  <view class="nav">
+    <view class="title">
+      <text class="screenTitle">经验要求</text>
+    </view>
+    <view class="content">
+      <text class="item {{active==index?'active':''}}" wx:for="{{experience}}" bindtap="toexperience" data-experience="{{index}}">{{item}}</text>
+
+    </view>
+  </view>
+  <view class="nav">
+    <view class="title">
+      <text class="screenTitle">学历要求</text>
+    </view>
+    <view class="content">
+      <text class="item {{active1==index?'active1':''}}" wx:for="{{education}}" bindtap="toeducation" data-education="{{index}}">{{item}}</text>
+
+    </view>
+  </view>
+  <view class="nav">
+    <view class="title">
+      <text class="screenTitle">薪资待遇</text>
+    </view>
+    <view class="content">
+      <text class="item {{active2==index?'active2':''}}" wx:for="{{pay}}" bindtap="topay" data-pay="{{index}}">{{item}}</text>
+
+    </view>
+  </view>
+  <view class="nav">
+    <view class="title">
+      <text class="screenTitle">求职状态</text>
+    </view>
+    <view class="content">
+      <text class="item {{active3==index?'active3':''}}" wx:for="{{job}}" bindtap="tojob" data-job="{{index}}">{{item}}</text>
+
+    </view>
+  </view>
+  </view>
+  <view class="button">
+  <button class="button1">清除</button>
+  <button class="button2">确定</button>
+  </view>
+</view>

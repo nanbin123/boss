@@ -1,0 +1,72 @@
+<!--pages/personalDetails/personalDetails.wxml-->
+<view class="personalDetails">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="newUserContent">
+      <view class="section">
+        <view class="name">
+          <text class="text">姓名</text>
+          <view class="page-section">
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                <input name="userName" class="weui-input" maxlength="4" bindinput="bindKeyInput" auto-focus placeholder="请输入姓名" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="section">
+        <view class="gender">
+          <text class="gendertext">性别</text>
+          <radio-group class="radio-group" bindchange="radioChange">
+            <radio class="radio" color="#fff" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+              <text class="gendertext1">{{item.value}}</text>
+            </radio>
+          </radio-group>
+        </view>
+      </view>
+
+      <view class="section">
+        <view class="name">
+          <text class="text">手机号</text>
+          <view class="page-section">
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                <input name="phone" class="weui-input" maxlength="11" bindinput="bindKeyInput" placeholder="请输入手机号" value="{{phone}}"/>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="section">
+        <view class="name">
+          <text class="text">接收简历邮箱</text>
+          <view class="page-section">
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                <input name="resumeEmail" class="weui-input" bindinput="bindKeyInput"  placeholder="请输入正确输入邮箱" bindblur="bind" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view> -->
+
+      <view class="section">
+        <view class="name">
+          <text class="text">我的职务</text>
+          <view class="page-section">
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                <input name="position" class="weui-input" bindinput="bindKeyInput"  placeholder="请输入职务" />
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <view class="button">
+      <button form-type="submit" bindtap="checkLogin">下一步</button>
+    </view>
+  </form>
+
+</view>

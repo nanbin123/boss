@@ -1,0 +1,24 @@
+<!--pages/JobListings/JobListings.wxml-->
+<view class="JobListings">
+  <view class="List" wx:for="{{listdata}}" wx:key="index">
+    <view class="ListCenter">
+      <view>
+        <view class="Listtitle">
+          <text class="item1">web 前端小程序开发</text>        
+          <text class="item4">{{item.salary}}</text>
+        </view>    
+        <view class="ListContent">    
+          <text class="item2">{{item.education}}</text>
+          <text class="item2">{{item.experience}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="ListRight">    
+      <text class="iconfont icon-gengduo4"></text>
+    </view> -->
+  </view>
+
+  <view class="button">
+    <button bindtap="toNewposition">发布新职位</button>
+  </view>
+</view>

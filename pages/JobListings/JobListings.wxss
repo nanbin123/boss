@@ -1,0 +1,75 @@
+/* pages/JobListings/JobListings.wxss */
+page{
+  width: 100%;
+
+}
+
+.JobListings{
+  width: 100%;
+  padding: 0 20rpx 100rpx;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+.List{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 20rpx;
+  border-bottom: 4rpx solid #f5f5f5
+}
+.ListCenter{
+  display: flex
+}
+.Listtitle{
+  display: flex;
+  align-items: center;
+
+}
+.item1{
+  font-size: 38rpx;
+  font-weight: bold;
+  display: block;
+}
+.ListContent{
+  margin-top: 20rpx;
+}
+.item2{
+  margin-top: 10rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  color: #666666;
+  margin-right: 60rpx;
+}
+.ListRight{
+  display: flex;
+  align-items: center;
+}
+.item3{
+  display: inline-block;
+  font-size: 32rpx;
+  color: #cdcdcd;
+  margin-right: 20rpx;
+}
+.item4{
+  display: inline-block;
+  margin-left: 50rpx;
+  font-size: 34rpx;
+}
+.iconfont{
+ font-size: 30rpx;
+  color: #cdcdcd;
+}
+.button{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 50rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+button{
+  color: #fff;
+  background: #d3361a;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}

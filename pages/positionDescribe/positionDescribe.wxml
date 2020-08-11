@@ -1,0 +1,17 @@
+<view class="body">
+  <view class="title">
+    <text class="titleT">职位描述</text>
+    <text class="titleB">详情清洗的职位描述将获得更多牛人关注</text>
+  </view>
+  <view class="section">
+    <form bindsubmit="formSubmit">
+      <textarea  bindinput="input" maxlength="500"  placeholder-class="place-holder" placeholder="请输入内容" name="positionDescribe" disable-default-padding="true" value="{{positionDescribe}}">
+           <text class="currentWordNumber">{{currentNoteLen|0}}/{{noteMaxLen}}</text>
+      </textarea>
+      <view class="viewButton">
+         <button form-type="submit"> 保存 </button>
+      </view>
+    </form>
+  </view>
+</view>
+

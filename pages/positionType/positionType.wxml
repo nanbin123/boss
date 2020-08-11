@@ -1,0 +1,42 @@
+<!-- 职位分类 -->
+<view class="positionClassification">
+	<view class="jobSearch">
+		<text class="search iconfont icon-sousuo2"></text>
+		<input type="text" placeholder="搜索岗位" value="{{name}}" confirm-type='search' bindinput='input1' bindconfirm='confirm1'>
+		</input>
+	</view>
+
+       <!-- 搜索-->
+		<view class="hosList" wx:if="{{isShow}}">
+			<scroll-view scroll-y="true" class="scroll1">				
+					<text  class="hosItem" wx:for="{{hosList}}" wx:for-item="h" bindtap="tohosList" data-name="{{h.name}}" data-id="{{h.id}}">{{h.name}}</text>
+		  </scroll-view>
+		</view> 
+
+	<view class="jobList" wx:if="{{!isShow}}">
+
+   <!--一级-->
+  	<scroll-view scroll-y="true" class="scroll"> 
+		<text class="jobItem {{active1==item.id? 'actives':''}}" wx:for="{{listDatas}}"           bindtap="showview" id="{{item.id}}">{{item.name}}</text>
+   </scroll-view>
+	</view>
+   <!--遮罩-->
+  <view class="bg" bindtap='none' style='display:{{display}}'></view>
+	<view class="show" style='display:{{display}}'>
+		<view class="menu">
+			<view class="left">
+				<scroll-view scroll-y="true" class="scroll">
+					<text class="listItem {{active==item.id? 'actives':''}}" wx:for="{{listDatas1}}" bindtap="showList" id="{{item.id}}">{{item.name}}</text>
+				</scroll-view>
+
+			</view>
+
+			<view class="right">
+				<scroll-view scroll-y="true" class="scroll">
+					<text class="listItem1 {{active2==item.id? 'actives':''}}" wx:for="{{listDatas2}}" bindtap='hideview' data-name="{{item.name}}" data-id="{{item.id}}">{{item.name}}</text>
+				</scroll-view>
+
+			</view>
+		</view>
+	</view>
+</view>

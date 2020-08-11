@@ -1,0 +1,162 @@
+/* pages/recruit/recruit.wxss */
+page{
+  width: 100%;
+  height: 100%
+}
+.recruit{
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+}
+.recruitTop{
+  width: 100%;
+  height: 90rpx;
+  background: #d3361a;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  
+}
+.recruitTopL{
+ font-size: 50rpx;
+ color: #fff;
+ width: 80%;
+ height: 100%;
+}
+
+.recruitTopR{
+ display:flex; 
+ color: #fff;
+
+}
+.icon1{
+  margin-left: 40rpx;
+}
+.recruitContent{
+  width: 100%;
+  background: #f5f5f5;
+
+}
+.ContentT{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 4rpx solid #eeeeee;
+  background: #fff;
+}
+.ContentTLeft text{
+   color: #666;
+  margin-right: 20rpx;
+  font-size: 14px;
+  /* line-height: 45px;
+  color: #666;
+  padding: 0 10rpx; */
+}
+.ContentTLeft .active {
+  color: #333;
+  font-weight: bold;
+}
+
+.ContentTRight{
+  margin-left: 20rpx;
+  color: #414A60;
+}
+
+.button1{
+  display: inline-block;
+  background: #f5f5f5;
+  font-size: 30rpx;
+  padding: 10rpx 30rpx;
+  border-radius: 10rpx; 
+}
+.ContentC{
+  width: 100%;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.contentName{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.head{
+  margin-bottom: 30rpx;
+}
+.name{ 
+  font-size: 40rpx;
+  font-weight: bold; 
+}
+.age{
+  font-size: 32rpx;
+  margin-left: 30rpx;
+  color: #61687C;
+}
+.jobStatus{
+  font-size: 32rpx;
+  margin-left: 30rpx;
+  color: #61687C;
+}
+.content{
+  font-size: 32rpx; 
+  color:#61687C;
+}
+
+
+.headPortrait{
+  width: 120rpx;
+  height: 120rpx;
+  background: darkcyan;
+  border-radius: 50%;
+
+}
+.item1{
+  font-size: 32rpx;
+  margin-left: 30rpx;
+}
+.line{  
+    display: inline-block;
+    height: 32rpx;  
+    vertical-align: middle;
+    padding-left: 30rpx; 
+    border-right: 1px solid rgb(224, 224, 224);
+}
+.content{
+  font-size: 32rpx;
+}
+.education{
+  padding-left:32rpx;
+}
+.advantage{
+  font-size: 32rpx;  
+  padding-bottom: 40rpx;
+  line-height: 50rpx;
+}
+.advantage text{
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; 
+}
+
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  height: 100%;
+  font-size: 40rpx;
+  margin-left: 30rpx;
+  vertical-align:middle;
+}

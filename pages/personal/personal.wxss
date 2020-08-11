@@ -1,0 +1,165 @@
+/* pages/personal/personal.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.personalContainer {
+  width: 100%;
+  height: 100%;
+}
+/* 登录头部 */
+.HeardTop {
+  width: 100%;
+  height: 270rpx;
+  background: #d3361a;
+  display: flex;
+  justify-content: space-between;
+  padding:0;
+  border-radius: 0;
+  line-height: normal;
+}
+.HeardTop::after{
+  border:none;
+}
+
+.HeardTop_L {
+  height: 270rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+}
+
+.item1 {
+  font-size: 50rpx;
+  color: #fff;
+  font-weight: bold;
+  margin: 80rpx 0 20rpx;
+}
+.item2 {
+  font-size: 32rpx;
+  color: #fff;
+}
+.userAvatar{
+  width: 150rpx;
+  height: 150rpx;
+  float: right;
+  margin: 70rpx 0 20rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+/* 内容样式 */
+.contentTop{
+ width: 100%;
+ background: #fff;
+ border-bottom: 4rpx solid #ededed;
+}
+.contentCenter{
+ width: 100%;
+ background: #fff;
+ border-bottom: 4rpx solid #ededed;
+}
+.contentBottom{
+ width: 100%;
+ height: 450rpx;
+ background: #fff;
+ border-bottom: 4rpx solid #ededed;
+}
+.items{
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+
+  font-size: 32rpx;
+}
+.iconfont{
+  height: 110rpx;
+  margin: 0 30rpx;
+}
+.items2{
+  float: right;
+  margin-right: 30rpx;
+  font-size: 50rpx;
+}
+
+
+/* 规则提示层 */
+.isRuleShow{
+  display: block;
+}
+.isRuleHide{
+  display: none;
+}
+.ruleZhezhao{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, .5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.ruleZhezhaoContent{
+  padding: 20rpx 0;
+  width: 80%;
+  background: #e1d2b1;
+  margin: 40% auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.ruleZhezhaoText{
+  width: 80%;
+  margin: 25rpx 0 25rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.ruleZhezhaoText .title{
+  color: #000;
+  font-size: 50rpx;
+  height: 60rpx;
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+  margin-bottom: 30rpx;
+  font-weight: bold;
+}
+.ruleZhezhaoText .WeChat{
+  width: 100%;
+  margin-bottom: 10rpx;
+  background: #d3361a;
+  color: #fff;
+}
+.ruleZhezhaoText .phone{
+  width: 100%;
+  border: #d3361a;
+}
+.ruleHide{
+  position: absolute;
+  top: -40rpx;
+  right: -60rpx;
+  font-size: 44rpx;
+}
+.rule{
+  display: block;
+  border: 1px solid #fff;
+  width: 100rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
